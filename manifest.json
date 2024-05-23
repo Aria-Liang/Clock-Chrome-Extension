@@ -7,7 +7,7 @@
     "service_worker": "main.js"
   },
   "action": {
-    "default_icon": "download.png"
+    "default_icon": "grass.png"
   },
-  "permissions": ["activeTab", "scripting"]
+  "permissions": ["activeTab", "tabs", "scripting"]
 }

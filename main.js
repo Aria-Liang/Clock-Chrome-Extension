@@ -10,12 +10,32 @@
 
 // setTimeout(alertUser, time);
 
+<<<<<<< HEAD
 chrome.action.onClicked.addListener((tab) => {
   chrome.scripting.executeScript({
     target: { tabId: tab.id },
     files: ['content.js'],
   });
+=======
+// chrome.action.onClicked.addListener((tab) => {
+//   chrome.scripting.executeScript({
+//     target: {tabId: tab.id},
+//     files: ['content.js']
+//   });
+// });
+
+chrome.action.onClicked.addListener(() => {
+  chrome.tabs.query({}, (tabs) => {
+  tabs.forEach((tab) => {
+    chrome.scripting.executeScript({
+      target: {tabId: tab.id},
+      files: ['content.js']
+    });
+  })
+})
+>>>>>>> c9f7227de0115f9c55f03377726eb7248e2d142b
 });
+
 
 //Research how to make extension run automatically (without needing to click it every time)
 //How to keep extension running if you change tabs
