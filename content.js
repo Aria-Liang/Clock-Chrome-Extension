@@ -1,6 +1,6 @@
 let name = prompt('Hi, what is your name?');
 let timeInput = prompt(
-  'How often would you like to be reminded to take a break?'
+  'How often would you like to be reminded to take a break (in second)?'
 );
 
 const alertUser = () => {
