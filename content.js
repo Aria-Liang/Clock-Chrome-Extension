@@ -7,7 +7,7 @@ const alertUser = () => {
   alert(`Hi, ${name}! It's time to take a break!`);
 };
 
-while (typeof Number(timeInput) !== 'number') {
+while (isNaN(timeInput)) {
   timeInput = prompt('Please input a valid number');
 }
 let time = Number(timeInput * 1000);
